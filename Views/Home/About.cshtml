@@ -1,0 +1,31 @@
+@using NileshPortfolio.Models
+@{
+    ViewData["Title"] = "About";
+}
+
+<h2>About Me</h2>
+<p>@PortfolioData.AboutText</p>
+
+<h3 class="mt-4">Why hire me?</h3>
+<ul>
+    @foreach (var point in PortfolioData.WhyHireMe)
+    {
+        <li>@point</li>
+    }
+</ul>
+
+<h3 class="mt-4">Skills</h3>
+<p>
+    @foreach (var skill in PortfolioData.Skills)
+    {
+        <span class="badge bg-primary me-1">@skill</span>
+    }
+</p>
+
+<h3 class="mt-4">Awards</h3>
+<ul>
+    @foreach (var award in PortfolioData.Awards)
+    {
+        <li>@award</li>
+    }
+</ul>

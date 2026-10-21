@@ -1,0 +1,22 @@
+@using NileshPortfolio.Models
+@{
+    ViewData["Title"] = "Experience";
+}
+
+<h2>Experience</h2>
+
+<div class="card mt-3">
+    <div class="card-body">
+        <h4 class="card-title">@PortfolioData.Company</h4>
+        <p class="text-muted">@PortfolioData.CompanyLocation</p>
+        <ul class="list-unstyled mb-0">
+            @foreach (var role in PortfolioData.Roles)
+            {
+                <li class="mb-2">
+                    <strong>@role.Title</strong><br />
+                    <small class="text-muted">@role.Period</small>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

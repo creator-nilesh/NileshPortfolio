@@ -1,0 +1,12 @@
+﻿@using NileshPortfolio.Models
+@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="hero text-center">
+    <h1 class="display-4">@PortfolioData.Name</h1>
+    <p class="lead">@PortfolioData.Headline</p>
+    <p class="text-muted">@PortfolioData.Location</p>
+    <a class="btn btn-primary me-2" asp-action="Projects">View Projects</a>
+    <a class="btn btn-outline-primary" asp-action="Contact">Contact Me</a>
+</section>

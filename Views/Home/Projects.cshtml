@@ -1,0 +1,26 @@
+@using NileshPortfolio.Models
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<h2>Projects</h2>
+
+@foreach (var project in PortfolioData.Projects)
+{
+    <div class="card mt-3">
+        <div class="card-body">
+            <h4 class="card-title">@project.Name</h4>
+            <p>@project.Summary</p>
+            <ul>
+                @foreach (var item in project.Highlights)
+                {
+                    <li>@item</li>
+                }
+            </ul>
+            @foreach (var tech in project.Technologies)
+            {
+                <span class="badge bg-secondary me-1">@tech</span>
+            }
+        </div>
+    </div>
+}
